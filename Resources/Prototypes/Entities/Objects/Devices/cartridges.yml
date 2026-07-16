@@ -142,7 +142,7 @@
   parent: BasePDACartridge
   id: CommunicationCartridge
   name: Wanted list cartridge
-  description: A program to get a list of wanted persons.
+  description: A program that allows you to make notifications.
   components:
   - type: Sprite
     state: cart-sec

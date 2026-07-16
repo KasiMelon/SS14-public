@@ -66614,6 +66614,8 @@
 /Locale/ru-RU/Imperial/Unsorted/entities.ftl鎰    .suffix = Карп
 /Locale/ru-RU/Imperial/Unsorted/entities.ftl鎰ent-MedTekCartridge = картридж "MedTek"
 /Locale/ru-RU/Imperial/Unsorted/entities.ftl鎰    .desc = Программа, предоставляющая инструменты для медицинской диагностики.
+/Locale/ru-RU/Imperial/Unsorted/entities.ftl鎰ent-CommunicationCartridge = картридж "Связь"
+/Locale/ru-RU/Imperial/Unsorted/entities.ftl鎰    .desc = Программа, позволяющая удалённо делать оповещения.
 /Locale/ru-RU/Imperial/Unsorted/entities.ftl鎰ent-ClothingOuterWinterColorBlue = синее зимнее пальто
 /Locale/ru-RU/Imperial/Unsorted/entities.ftl鎰    .desc = Тяжелая куртка из 'синтетического' меха животных.
 /Locale/ru-RU/Imperial/Unsorted/entities.ftl鎰ent-RandomAnomalyInjectorSpawner = спавнер случайной зоны аномалии

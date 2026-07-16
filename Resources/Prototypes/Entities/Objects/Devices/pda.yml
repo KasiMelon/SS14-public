@@ -658,6 +658,13 @@
     borderColor: "#7C5D00"
   - type: Icon
     state: pda-captain
+  - type: CartridgeLoader
+    preinstalled:
+    - CrewManifestCartridge
+    - NotekeeperCartridge
+    - NanoTaskCartridge
+    - NewsReaderCartridge
+    - CommunicationCartridge
 
 - type: entity
   parent: BasePDA
@@ -683,6 +690,13 @@
     accentHColor: "#447987"
   - type: Icon
     state: pda-hop
+  - type: CartridgeLoader
+    preinstalled:
+    - CrewManifestCartridge
+    - NotekeeperCartridge
+    - NanoTaskCartridge
+    - NewsReaderCartridge
+    - CommunicationCartridge
 
 - type: entity
   parent: BasePDA
@@ -878,6 +892,7 @@
     - NewsReaderCartridge
     - WantedListCartridge
     - LogProbeCartridge
+    - CommunicationCartridge
 
 - type: entity
   parent: BaseSecurityPDA
