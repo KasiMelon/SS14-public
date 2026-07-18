@@ -1,0 +1,11 @@
+- type: tile
+  id: FloorCult
+  name: tiles-mining-tile
+  sprite: /Textures/Tiles/mining_floor.png
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  itemDrop: FloorTileItemMining
+  footstepSounds:
+    collection: FootstepTile
+  heatCapacity: 10000

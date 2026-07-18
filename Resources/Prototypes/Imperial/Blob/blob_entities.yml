@@ -1,0 +1,921 @@
+- type: entity
+  id: BaseBlobStructure
+  parent: BaseStructure
+  abstract: true
+  name: blob structure
+  description: A dense growth of hostile biomass.
+  components:
+  - type: BlobStructure
+  - type: Appearance
+  - type: BlobVisuals
+  - type: Damageable
+    damageContainer: Biological
+  - type: Sprite
+    sprite: Imperial/blob/blob.rsi
+    tags:
+    - BypassInteractionRangeChecks
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        density: 60
+        hard: true
+        mask:
+        - MachineMask
+        layer:
+        - BlobTileLayer
+
+- type: entity
+  id: BlobOvermindController
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: UserInterface
+    interfaces:
+      enum.BlobChemicalMenuBuiKey.Key:
+        type: BlobChemicalBui
+  - type: Item
+    size: Tiny
+  - type: Sprite
+    sprite: Imperial/blob/blob.rsi
+    layers:
+    - state: blob
+      visible: false
+  - type: Unremoveable
+    deleteOnDrop: false
+
+- type: entity
+  parent:
+  - Incorporeal
+  - BaseMob
+  id: MobBlobOvermind
+  name: сознание Блоба
+  description: Бестелесное сознание, направляющее рост Блоба.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Input
+    context: "ghost"
+  - type: ContentEye
+    maxZoom: 1.44,1.44
+  - type: Eye
+    drawFov: false
+  - type: Examiner
+    skipChecks: true
+  - type: BlobOvermind
+  - type: ShowAntagIcons
+  - type: ShowElectrocutionHUD
+  - type: Speech
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Blob
+    - BlobHive
+  - type: ActiveRadio
+    channels:
+    - Blob
+    - BlobHive
+  - type: IntrinsicRadioReceiver
+  - type: NpcFactionMember
+    factions:
+    - Blob
+  - type: Tag
+    tags:
+    - BypassInteractionRangeChecks
+  - type: PointLight
+    netsync: false
+    enabled: true
+    radius: 4
+    energy: 2
+    color: "#6bcf6b"
+    castShadows: false
+  - type: Sprite
+    sprite: Imperial/blob/blob.rsi
+    layers:
+    - state: marker
+      shader: unshaded
+
+- type: entity
+  parent: BaseMentalAction
+  id: ActionBlobAttack
+  name: Lash Out
+  description: "Orders nearby biomass to strike the selected tile. Cost: 1 biomass."
+  components:
+  - type: Action
+    useDelay: 0.5
+    icon:
+      sprite: Imperial/blob/blob.rsi
+      state: ui_help
+  - type: TargetAction
+    range: 100
+    checkCanAccess: false
+  - type: WorldTargetAction
+    event: !type:BlobAttackActionEvent
+
+- type: entity
+  parent: BaseMentalAction
+  id: ActionBlobConsumeTile
+  name: Consume Structure
+  description: Digests one of your Blob structures. Tiles do not refund biomass.
+  components:
+  - type: Action
+    useDelay: 0.5
+    icon:
+      sprite: Imperial/blob/blob.rsi
+      state: ui_swap
+  - type: TargetAction
+    range: 100
+    checkCanAccess: false
+  - type: WorldTargetAction
+    event: !type:BlobConsumeTileActionEvent
+
+- type: entity
+  parent: BaseMentalAction
+  id: ActionBlobPlaceTile
+  name: Grow Tile
+  description: "Spreads a blob tile near your core or existing biomass. Cost: 5 biomass."
+  components:
+  - type: Action
+    useDelay: 0.5
+    icon:
+      sprite: Imperial/blob/blob.rsi
+      state: block
+  - type: TargetAction
+    range: 100
+    checkCanAccess: false
+  - type: WorldTargetAction
+    event: !type:BlobPlaceTileActionEvent
+
+- type: entity
+  parent: BaseMentalAction
+  id: ActionBlobPlaceShieldTile
+  name: Upgrade Tile
+  description: "Upgrades your normal tile into a strong tile, and a strong tile into a reflective tile. Cost: 5 and 5 biomass."
+  components:
+  - type: Action
+    useDelay: 1
+    icon:
+      sprite: Imperial/blob/blob.rsi
+      state: block2
+  - type: TargetAction
+    range: 100
+    checkCanAccess: false
+  - type: WorldTargetAction
+    event: !type:BlobPlaceShieldTileActionEvent
+
+- type: entity
+  parent: BaseMentalAction
+  id: ActionBlobPlaceNode
+  name: Grow Node
+  description: "Creates a Blob node to extend your network. Cost: 60 biomass."
+  components:
+  - type: Action
+    useDelay: 1
+    icon:
+      sprite: Imperial/blob/blob.rsi
+      state: ui_node
+  - type: TargetAction
+    range: 100
+    checkCanAccess: false
+  - type: WorldTargetAction
+    event: !type:BlobPlaceNodeActionEvent
+
+- type: entity
+  parent: BaseMentalAction
+  id: ActionBlobPlaceFactory
+  name: Grow Factory
+  description: "Creates a Blob factory that periodically releases spores. Cost: 60 biomass."
+  components:
+  - type: Action
+    useDelay: 1
+    icon:
+      sprite: Imperial/blob/blob.rsi
+      state: ui_factory
+  - type: TargetAction
+    range: 100
+    checkCanAccess: false
+  - type: WorldTargetAction
+    event: !type:BlobPlaceFactoryActionEvent
+
+- type: entity
+  parent: BaseMentalAction
+  id: ActionBlobPlaceResource
+  name: Grow Resource
+  description: "Creates a resource node that increases biomass income. Cost: 40 biomass."
+  components:
+  - type: Action
+    useDelay: 1
+    icon:
+      sprite: Imperial/blob/blob.rsi
+      state: ui_resource
+  - type: TargetAction
+    range: 100
+    checkCanAccess: false
+  - type: WorldTargetAction
+    event: !type:BlobPlaceResourceActionEvent
+
+- type: entity
+  parent: BaseMentalAction
+  id: ActionBlobPlaceStorage
+  name: Grow Storage
+  description: "Creates a Blob storage structure that increases your biomass cap. Cost: 40 biomass."
+  components:
+  - type: Action
+    useDelay: 1
+    icon:
+      sprite: Imperial/blob/blob.rsi
+      state: ui_resource
+  - type: TargetAction
+    range: 100
+    checkCanAccess: false
+  - type: WorldTargetAction
+    event: !type:BlobPlaceStorageActionEvent
+
+- type: entity
+  parent: BaseMentalAction
+  id: ActionBlobPlaceLauncher
+  name: Grow Launcher
+  description: "Creates a Blob combat structure that automatically attacks nearby enemies. Cost: 7 biomass."
+  components:
+  - type: Action
+    useDelay: 1
+    icon:
+      sprite: Imperial/blob/blob.rsi
+      state: ui_factory
+  - type: TargetAction
+    range: 100
+    checkCanAccess: false
+  - type: WorldTargetAction
+    event: !type:BlobPlaceLauncherActionEvent
+
+- type: entity
+  parent: BaseMentalAction
+  id: ActionBlobPlaceCooling
+  name: Grow Cooling Organ
+  description: "Creates a defensive Blob structure that removes burn damage from nearby biomass. Cost: 5 biomass."
+  components:
+  - type: Action
+    useDelay: 1
+    icon:
+      sprite: Imperial/blob/blob.rsi
+      state: ui_resource
+  - type: TargetAction
+    range: 100
+    checkCanAccess: false
+  - type: WorldTargetAction
+    event: !type:BlobPlaceCoolingActionEvent
+
+- type: entity
+  parent: BaseMentalAction
+  id: ActionBlobSpawnBlobbernaut
+  name: Form Blobbernaut
+  description: "Creates a Blobbernaut directly on the targeted Blob factory without destroying it. Cost: 60 biomass."
+  components:
+  - type: Action
+    useDelay: 2
+    icon:
+      sprite: Imperial/blob/blob.rsi
+      state: ui_blobbernaut
+  - type: TargetAction
+    range: 100
+    checkCanAccess: false
+  - type: WorldTargetAction
+    event: !type:BlobSpawnBlobbernautActionEvent
+
+- type: entity
+  parent: BaseMentalAction
+  id: ActionBlobRallyMinions
+  name: Rally Minions
+  description: Orders your spores and unoccupied minions to move to a target point.
+  components:
+  - type: Action
+    useDelay: 1
+    icon:
+      sprite: Imperial/blob/blob.rsi
+      state: ui_blobbernaut
+  - type: TargetAction
+    range: 100
+    checkCanAccess: false
+  - type: WorldTargetAction
+    event: !type:BlobRallyMinionsActionEvent
+
+- type: entity
+  parent: BaseMentalAction
+  id: ActionBlobUpgradeGeneration
+  name: Boost Metabolism
+  description: Spend an evolution point to increase base biomass generation.
+  components:
+  - type: Action
+    useDelay: 1
+    icon:
+      sprite: Imperial/blob/blob.rsi
+      state: ui_resource
+  - type: InstantAction
+    event: !type:BlobUpgradeGenerationActionEvent
+
+- type: entity
+  parent: BaseMentalAction
+  id: ActionBlobUpgradeAttack
+  name: Harden Assault
+  description: Spend an evolution point to strengthen the Blob's active attack.
+  components:
+  - type: Action
+    useDelay: 1
+    icon:
+      sprite: Imperial/blob/blob.rsi
+      state: ui_help
+  - type: InstantAction
+    event: !type:BlobUpgradeAttackActionEvent
+
+- type: entity
+  parent: BaseMentalAction
+  id: ActionBlobUpgradeCapacity
+  name: Expand Reservoir
+  description: Spend an evolution point to increase the Blob's base biomass cap.
+  components:
+  - type: Action
+    useDelay: 1
+    icon:
+      sprite: Imperial/blob/blob.rsi
+      state: ui_resource
+  - type: InstantAction
+    event: !type:BlobUpgradeCapacityActionEvent
+
+- type: entity
+  parent: BaseMentalAction
+  id: ActionBlobSplitConsciousness
+  name: Split Consciousness
+  description: "Creates a second core near one of your nodes so the Blob can survive losing a core. Cost: 100 biomass."
+  components:
+  - type: Action
+    useDelay: 2
+    icon:
+      sprite: Imperial/blob/blob.rsi
+      state: ui_split
+  - type: TargetAction
+    range: 100
+    checkCanAccess: false
+  - type: WorldTargetAction
+    event: !type:BlobSplitConsciousnessActionEvent
+
+- type: entity
+  parent: BaseMentalAction
+  id: ActionBlobShowStatus
+  name: Swarm Status
+  description: Shows the Blob's current biomass and growth pace.
+  components:
+  - type: Action
+    useDelay: 1
+    icon:
+      sprite: Imperial/blob/blob.rsi
+      state: ui_help
+  - type: InstantAction
+    event: !type:BlobShowStatusActionEvent
+
+- type: entity
+  parent: BaseMentalAction
+  id: ActionBlobChangeChemical
+  name: Change Chemical
+  description: Opens the Blob reagent selection menu. Changing reagent costs 20 biomass.
+  components:
+  - type: Action
+    useDelay: 1
+    icon:
+      sprite: Imperial/blob/blob.rsi
+      state: ui_chemswap
+  - type: InstantAction
+    event: !type:BlobChangeChemicalActionEvent
+
+- type: entity
+  id: BlobAttackEffect
+  name: всплеск биомассы
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Imperial/blob/blob.rsi
+    drawdepth: Effects
+    layers:
+    - state: blob_glow
+  - type: TimedDespawn
+    lifetime: 0.35
+
+- type: entity
+  parent: BaseMentalAction
+  id: ActionBlobMouseTransform
+  name: Rupture
+  description: Tear open the carrier and reveal the Blob core immediately.
+  components:
+  - type: Action
+    useDelay: 1
+    icon:
+      sprite: Imperial/blob/blob.rsi
+      state: ui_tocore
+  - type: InstantAction
+    event: !type:BlobMouseTransformActionEvent
+
+- type: entity
+  id: MobBlobMouse
+  parent:
+  - SimpleMobBase
+  - BaseMobAnimal
+  name: зародыш Блоба
+  description: Носитель спящей массы Блоба. Если его не остановить, он раскроется в ядро.
+  components:
+  - type: BlobMouse
+  - type: Speech
+    speechSounds: Squeak
+    speechVerb: SmallMob
+    allowedEmotes: [ 'Squeak' ]
+  - type: Sprite
+    drawdepth: SmallMobs
+    sprite: Mobs/Animals/mouse.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base", "movement" ]
+      state: mouse-0
+  - type: SpriteMovement
+    movementLayers:
+      movement:
+        state: mouse-moving-0
+    noMovementLayers:
+      movement:
+        state: mouse-0
+  - type: Icon
+    sprite: Mobs/Animals/mouse.rsi
+    state: mouse-0
+  - type: PressureImmunity
+  - type: NpcFactionMember
+    factions:
+    - Blob
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Common
+    - Blob
+    - BlobHive
+  - type: ActiveRadio
+    channels:
+    - Common
+    - Blob
+    - BlobHive
+  - type: IntrinsicRadioReceiver
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.2
+        density: 100
+        mask:
+        - Impassable
+        - LowImpassable
+        layer:
+        - SmallMobLayer
+
+- type: entity
+  id: BlobTile
+  parent: BaseBlobStructure
+  name: клетка Блоба
+  description: Пульсирующая клетка расползающейся биомассы.
+  components:
+  - type: Sprite
+    layers:
+    - map: [ "enum.BlobVisualLayers.Base" ]
+      state: blob
+  - type: Icon
+    sprite: Imperial/blob/blob.rsi
+    state: blob
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 15
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  id: BlobTileShield
+  parent: BaseBlobStructure
+  name: прочная клетка Блоба
+  description: Более плотная и устойчивая масса биомассы.
+  components:
+  - type: Sprite
+    layers:
+    - map: [ "enum.BlobVisualLayers.Base" ]
+      state: blob_shield
+  - type: Icon
+    sprite: Imperial/blob/blob.rsi
+    state: blob_shield
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 30
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  id: BlobTileReflective
+  parent: BaseBlobStructure
+  name: отражающая клетка Блоба
+  description: Мерцающая ткань, приспособленная отражать входящую энергию.
+  components:
+  - type: BlobReflectiveTile
+  - type: Sprite
+    layers:
+    - map: [ "enum.BlobVisualLayers.Base" ]
+      state: blob_shield
+    - map: [ "enum.BlobVisualLayers.Glow" ]
+      state: blob_glow
+      shader: unshaded
+  - type: Icon
+    sprite: Imperial/blob/blob.rsi
+    state: blob_glow
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 30
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  id: BlobCore
+  parent: BaseBlobStructure
+  name: ядро Блоба
+  description: Сердце Блоба. Его уничтожение должно подорвать всю колонию.
+  components:
+  - type: Sprite
+    layers:
+    - map: [ "enum.BlobVisualLayers.Base" ]
+      state: blob_core
+    - map: [ "enum.BlobVisualLayers.Overlay" ]
+      state: blob_core_overlay
+      shader: unshaded
+  - type: Icon
+    sprite: Imperial/blob/blob.rsi
+    state: blob_core
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 450
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  id: BlobCoreGhostRole
+  parent: BlobCore
+  name: ядро Блоба
+  description: Сердце Блоба. Ожидающий фрагмент сознания может быть занят призраком.
+  components:
+  - type: GhostRole
+    name: blob-ghost-role-core-name
+    description: blob-ghost-role-core-desc
+    rules: ghost-role-component-default-rules
+    reregister: false
+  - type: GhostRoleMobSpawner
+    deleteOnSpawn: false
+    prototype: MobBlobOvermind
+
+- type: entity
+  id: BlobNode
+  parent: BaseBlobStructure
+  name: узел Блоба
+  description: Узловой нарост, помогающий Блобу расширять контроль.
+  components:
+  - type: Sprite
+    layers:
+    - map: [ "enum.BlobVisualLayers.Base" ]
+      state: blob_node
+    - map: [ "enum.BlobVisualLayers.Overlay" ]
+      state: blob_node_overlay
+      shader: unshaded
+  - type: Icon
+    sprite: Imperial/blob/blob.rsi
+    state: blob_node
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  id: BlobFactory
+  parent: BaseBlobStructure
+  name: фабрика Блоба
+  description: Специализированный нарост, периодически создающий споры Блоба.
+  components:
+  - type: Sprite
+    layers:
+    - map: [ "enum.BlobVisualLayers.Base" ]
+      state: blob_factory
+    - map: [ "enum.BlobVisualLayers.Glow" ]
+      state: blob_factory_glow
+  - type: Icon
+    sprite: Imperial/blob/blob.rsi
+    state: blob_factory
+  - type: BlobFactory
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 60
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  id: BlobResource
+  parent: BaseBlobStructure
+  name: ресурсный узел Блоба
+  description: Нарост, вырабатывающий биомассу для питания Блоба.
+  components:
+  - type: Sprite
+    layers:
+    - map: [ "enum.BlobVisualLayers.Base" ]
+      state: blob_resource
+    - map: [ "enum.BlobVisualLayers.Glow" ]
+      state: blob_resource_glow
+  - type: Icon
+    sprite: Imperial/blob/blob.rsi
+    state: blob_resource
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 40
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  id: BlobStorage
+  parent: BaseBlobStructure
+  name: хранилище Блоба
+  description: Плотный резервуар биомассы, увеличивающий запасы Блоба.
+  components:
+  - type: Sprite
+    layers:
+    - map: [ "enum.BlobVisualLayers.Base" ]
+      state: blob_resource
+    - map: [ "enum.BlobVisualLayers.Glow" ]
+      state: blob_resource_glow
+      shader: unshaded
+  - type: Icon
+    sprite: Imperial/blob/blob.rsi
+    state: blob_resource
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 40
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  id: BlobLauncher
+  parent: BaseBlobStructure
+  name: пускатель Блоба
+  description: Агрессивный орган биомассы, атакующий ближайших нарушителей.
+  components:
+  - type: BlobLauncher
+  - type: Sprite
+    layers:
+    - map: [ "enum.BlobVisualLayers.Base" ]
+      state: blob_factory
+    - map: [ "enum.BlobVisualLayers.Glow" ]
+      state: blob_factory_glow
+      shader: unshaded
+  - type: Icon
+    sprite: Imperial/blob/blob.rsi
+    state: blob_factory_glow
+
+- type: entity
+  id: BlobCooling
+  parent: BaseBlobStructure
+  name: охладитель Блоба
+  description: Стабилизирующий орган биомассы, отводящий жар от ближайших тканей Блоба.
+  components:
+  - type: BlobCooling
+  - type: Sprite
+    layers:
+    - map: [ "enum.BlobVisualLayers.Base" ]
+      state: blob
+    - map: [ "enum.BlobVisualLayers.Glow" ]
+      state: blob_glow
+      shader: unshaded
+  - type: Icon
+    sprite: Imperial/blob/blob.rsi
+    state: blob_glow
+
+- type: entity
+  id: ClothingHeadHelmetBlob
+  parent: ClothingHeadHelmetBase
+  name: панцирь Блоба
+  description: Затвердевшая масса биомассы, принявшая форму защиты для головы.
+  components:
+  - type: Unremoveable
+  - type: Sprite
+    sprite: Imperial/blob/helmet.rsi
+    state: blobhat
+  - type: Clothing
+    sprite: Imperial/blob/helmet.rsi
+    equippedState: blobhat
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+        Piercing: 0.85
+        Heat: 0.9
+
+- type: entity
+  id: MobBlobSpore
+  parent: SimpleMobBase
+  name: спора Блоба
+  description: Плавающая спора Блоба.
+  components:
+  - type: CombatMode
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 3
+    baseSprintSpeed: 7
+  - type: BlobMob
+  - type: BlobSpore
+  - type: PressureImmunity
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Common
+    - Blob
+    - BlobHive
+  - type: ActiveRadio
+    channels:
+    - Common
+    - Blob
+    - BlobHive
+  - type: IntrinsicRadioReceiver
+  - type: Sprite
+    sprite: Imperial/blob/blob.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: blobpod
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.1
+        density: 30
+        mask:
+        - SmallMobMask
+        layer:
+        - SmallMobLayer
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: blobpod
+      Dead:
+        Base: blob_spore_temp
+  - type: NpcFactionMember
+    factions:
+    - Blob
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Imperial/blob/sound_effects_attackblob.ogg
+    angle: 0
+    animation: WeaponArcBite
+    damage:
+      types:
+        Blunt: 4
+        Poison: 2
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      25: Dead
+  - type: Stamina
+    critThreshold: 25
+    animationThreshold: 5
+  - type: HTN
+    rootTask:
+      task: BlobSporeCompound
+
+- type: entity
+  id: MobBlobbernaut
+  parent: [ SimpleMobBase, MobCombat ]
+  name: блоббернаут
+  description: Огромная и подвижная масса боевой биомассы.
+  components:
+  - type: CombatMode
+    isInCombatMode: true
+  - type: BlobMob
+  - type: Blobbernaut
+  - type: PressureImmunity
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Common
+    - Blob
+    - BlobHive
+  - type: ActiveRadio
+    channels:
+    - Common
+    - Blob
+    - BlobHive
+  - type: IntrinsicRadioReceiver
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Imperial/blob/blob.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: blobbernaut
+      color: "#6bcf6b"
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.4
+        density: 120
+        mask:
+        - Impassable
+        - HighImpassable
+        - MidImpassable
+        - LowImpassable
+        layer:
+        - MobLayer
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2.5
+    baseSprintSpeed: 4.5
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: blobbernaut
+      Critical:
+        Base: blobbernaut_dead
+      Dead:
+        Base: blobbernaut_dead
+  - type: Damageable
+    damageContainer: Biological
+  - type: MobState
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      150: Critical
+      250: Dead
+  - type: Stamina
+    critThreshold: 150
+  - type: Bloodstream
+    bloodReagents:
+      reagents:
+      - ReagentId: Slime
+        Quantity: 30
+    bloodMaxVolume: 30
+  - type: NpcFactionMember
+    factions:
+    - Blob
+  - type: GhostRole
+    name: blob-ghost-role-blobbernaut-name
+    description: blob-ghost-role-blobbernaut-desc
+    rules: ghost-role-component-default-rules
+    reregister: false
+  - type: GhostTakeoverAvailable
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Imperial/blob/sound_effects_blobattack.ogg
+    angle: 0
+    animation: WeaponArcPunch
+    damage:
+      groups:
+        Brute: 18
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 250
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: htnCompound
+  id: BlobSporeCompound
+  branches:
+    - tasks:
+        - !type:HTNPrimitiveTask
+          operator: !type:UtilityOperator
+            proto: OrderedTargets
+        - !type:HTNCompoundTask
+          task: MeleeAttackOrderedTargetCompound
+    - tasks:
+        - !type:HTNCompoundTask
+          task: MeleeCombatCompound
+    - tasks:
+        - !type:HTNCompoundTask
+          task: IdleCompound
