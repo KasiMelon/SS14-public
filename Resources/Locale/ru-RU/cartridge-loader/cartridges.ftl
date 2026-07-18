@@ -1,4 +1,4 @@
-﻿default-program-namlot-name-cartridge = Картридж
+default-program-namlot-name-cartridge = Картридж
 
 default-program-name = Программа
 notekeeper-program-name = Заметки
@@ -30,6 +30,7 @@ astro-nav-program-name = АстроНав
 
 med-tek-program-name = МедТек
 
+communication-program-name = Оповещение
 # Картридж НаноЗадачи
 
 nano-task-ui-heading-high-priority-tasks =

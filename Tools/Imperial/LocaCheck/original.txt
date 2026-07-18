@@ -1,8 +1,8 @@
 /Locale/en-US/client-state-commands.ftl鎰# Loc strings for various entity state & client-side PVS related commands
 /Locale/en-US/client-state-commands.ftl鎰cmd-reset-ent-help = Usage: resetent <Entity UID>
-/Locale/en-US/client-state-commands.ftl鎰cmd-reset-ent-desc = Reset an entity to the most recently received server state. This will also reset entities that have been detached to null-space. 
+/Locale/en-US/client-state-commands.ftl鎰cmd-reset-ent-desc = Reset an entity to the most recently received server state. This will also reset entities that have been detached to null-space.
 /Locale/en-US/client-state-commands.ftl鎰cmd-reset-all-ents-help = Usage: resetallents
-/Locale/en-US/client-state-commands.ftl鎰cmd-reset-all-ents-desc = Resets all entities to the most recently received server state. This only impacts entities that have not been detached to null-space. 
+/Locale/en-US/client-state-commands.ftl鎰cmd-reset-all-ents-desc = Resets all entities to the most recently received server state. This only impacts entities that have not been detached to null-space.
 /Locale/en-US/client-state-commands.ftl鎰cmd-detach-ent-help = Usage: detachent <Entity UID>
 /Locale/en-US/client-state-commands.ftl鎰cmd-detach-ent-desc = Detach an entity to null-space, as if it had left PVS range.
 /Locale/en-US/client-state-commands.ftl鎰cmd-local-delete-help = Usage: localdelete <Entity UID>
@@ -5007,7 +5007,7 @@
 /Locale/en-US/accent/cowboy.ftl鎰accent-cowboy-words-75 = secoff
 /Locale/en-US/accent/cowboy.ftl鎰accent-cowboy-replacement-75 = deputy
 /Locale/en-US/accent/cowboy.ftl鎰accent-cowboy-words-76 = security
-/Locale/en-US/accent/cowboy.ftl鎰accent-cowboy-replacement-76 = law 
+/Locale/en-US/accent/cowboy.ftl鎰accent-cowboy-replacement-76 = law
 /Locale/en-US/accent/cowboy.ftl鎰accent-cowboy-words-77 = shitsec
 /Locale/en-US/accent/cowboy.ftl鎰accent-cowboy-replacement-77 = crooked law
 /Locale/en-US/accent/cowboy.ftl鎰accent-cowboy-words-78 = shoe
@@ -10385,7 +10385,7 @@
 /Locale/en-US/accessories/vox-hair.ftl鎰marking-VoxHairFlowing = Vox Flowing
 /Locale/en-US/accessories/vox-hair.ftl鎰marking-VoxHairHawk = Vox Hawk
 /Locale/en-US/accessories/vox-hair.ftl鎰marking-VoxHairHorns = Vox Horns
-/Locale/en-US/accessories/vox-hair.ftl鎰marking-VoxHairKeelQuills = Vox Keel Quills 
+/Locale/en-US/accessories/vox-hair.ftl鎰marking-VoxHairKeelQuills = Vox Keel Quills
 /Locale/en-US/accessories/vox-hair.ftl鎰marking-VoxHairKeetQuills = Vox Keet Quills
 /Locale/en-US/accessories/vox-hair.ftl鎰marking-VoxHairKingly = Vox Kingly
 /Locale/en-US/accessories/vox-hair.ftl鎰marking-VoxHairLongBraid = Vox Long Braid
@@ -11787,9 +11787,9 @@
 /Locale/en-US/atmos/atmos-alerts-console.ftl鎰atmos-alerts-window-pressure-label = Pressure
 /Locale/en-US/atmos/atmos-alerts-console.ftl鎰atmos-alerts-window-pressure-value = {$value} kPa
 /Locale/en-US/atmos/atmos-alerts-console.ftl鎰atmos-alerts-window-oxygenation-label = Oxygenation
-/Locale/en-US/atmos/atmos-alerts-console.ftl鎰atmos-alerts-window-oxygenation-value = {$value}% 
+/Locale/en-US/atmos/atmos-alerts-console.ftl鎰atmos-alerts-window-oxygenation-value = {$value}%
 /Locale/en-US/atmos/atmos-alerts-console.ftl鎰atmos-alerts-window-other-gases-label = Other present gases
-/Locale/en-US/atmos/atmos-alerts-console.ftl鎰atmos-alerts-window-other-gases-value = {$shorthand} ({$value}%) 
+/Locale/en-US/atmos/atmos-alerts-console.ftl鎰atmos-alerts-window-other-gases-value = {$shorthand} ({$value}%)
 /Locale/en-US/atmos/atmos-alerts-console.ftl鎰atmos-alerts-window-other-gases-value-nil = None
 /Locale/en-US/atmos/atmos-alerts-console.ftl鎰atmos-alerts-window-silence-alerts = Silence alerts from this alarm
 /Locale/en-US/atmos/atmos-alerts-console.ftl鎰atmos-alerts-window-label-alert-types = Alert levels:
@@ -11810,7 +11810,7 @@
 /Locale/en-US/game-ticking/game-presets/preset-survival.ftl鎰survival-description = No internal threats, but how long can the station survive increasingly chaotic and frequent events?
 /Locale/en-US/game-ticking/game-presets/preset-survival.ftl鎰kessler-syndrome-title = Kessler Syndrome
 /Locale/en-US/game-ticking/game-presets/preset-survival.ftl鎰kessler-syndrome-description = No internal threats, but the station is quickly falling into a belt of meteors!
-/Locale/en-US/atmos/atmos-pipe-layers.ftl鎰atmos-pipe-layers-component-layer-primary = primary 
+/Locale/en-US/atmos/atmos-pipe-layers.ftl鎰atmos-pipe-layers-component-layer-primary = primary
 /Locale/en-US/atmos/atmos-pipe-layers.ftl鎰atmos-pipe-layers-component-layer-secondary = secondary
 /Locale/en-US/atmos/atmos-pipe-layers.ftl鎰atmos-pipe-layers-component-layer-tertiary = tertiary
 /Locale/en-US/atmos/atmos-pipe-layers.ftl鎰atmos-pipe-layers-component-change-layer = Adjusted to its {$layerName} configuration.
@@ -13493,18 +13493,18 @@
 /Locale/en-US/administration/commands/change-cvar-command.ftl鎰cmd-changecvar-search-no-matches = No cvars found matching the search term.
 /Locale/en-US/administration/commands/change-cvar-command.ftl鎰cmd-changecvar-search-matches = Found {$count} cvars matching the search term:
 /Locale/en-US/administration/commands/change-cvar-command.ftl鎰cmd-changecvar-arg-name = <name | ? | search>
-/Locale/en-US/Imperial/PiratesNewHorizon/book-piratecode.ftl鎰book-text-piratecode = [bold]Each[/bold] maggot, calling himself a realll pirate, [bold]must[/bold] follow pirate code. Each dumb ass, that [bold]breakes[/bold] it must be punished by the decision of the team. Each pirate crew [bold]must[/bold] choose a captain in the start of their journey. 
-/Locale/en-US/Imperial/PiratesNewHorizon/book-piratecode.ftl鎰        1. Each pirate shall be proud of his title. 
-/Locale/en-US/Imperial/PiratesNewHorizon/book-piratecode.ftl鎰        2. The only pirate's morals is the pirate code. 
+/Locale/en-US/Imperial/PiratesNewHorizon/book-piratecode.ftl鎰book-text-piratecode = [bold]Each[/bold] maggot, calling himself a realll pirate, [bold]must[/bold] follow pirate code. Each dumb ass, that [bold]breakes[/bold] it must be punished by the decision of the team. Each pirate crew [bold]must[/bold] choose a captain in the start of their journey.
+/Locale/en-US/Imperial/PiratesNewHorizon/book-piratecode.ftl鎰        1. Each pirate shall be proud of his title.
+/Locale/en-US/Imperial/PiratesNewHorizon/book-piratecode.ftl鎰        2. The only pirate's morals is the pirate code.
 /Locale/en-US/Imperial/PiratesNewHorizon/book-piratecode.ftl鎰        3. The only pirate's home is the ship.
-/Locale/en-US/Imperial/PiratesNewHorizon/book-piratecode.ftl鎰        4. The only pirate's family is his crew. 
-/Locale/en-US/Imperial/PiratesNewHorizon/book-piratecode.ftl鎰        5. The only pirate's goal is for the crew to get rich. 
-/Locale/en-US/Imperial/PiratesNewHorizon/book-piratecode.ftl鎰        6. Pirate shall be ready to risk for the success of the fellows. 
-/Locale/en-US/Imperial/PiratesNewHorizon/book-piratecode.ftl鎰        7. Pirate is forbidden to kill the innocents from the space ship. 
-/Locale/en-US/Imperial/PiratesNewHorizon/book-piratecode.ftl鎰        8. Pirate is permitted to make a hole in the heads of his true enemies: the heads of the enemy ship, and their guards. 
-/Locale/en-US/Imperial/PiratesNewHorizon/book-piratecode.ftl鎰        9. Pirate is forbidden to leave his teammate in trouble 
-/Locale/en-US/Imperial/PiratesNewHorizon/book-piratecode.ftl鎰        10. Pirate must server his captain. 
-/Locale/en-US/Imperial/PiratesNewHorizon/book-piratecode.ftl鎰 
+/Locale/en-US/Imperial/PiratesNewHorizon/book-piratecode.ftl鎰        4. The only pirate's family is his crew.
+/Locale/en-US/Imperial/PiratesNewHorizon/book-piratecode.ftl鎰        5. The only pirate's goal is for the crew to get rich.
+/Locale/en-US/Imperial/PiratesNewHorizon/book-piratecode.ftl鎰        6. Pirate shall be ready to risk for the success of the fellows.
+/Locale/en-US/Imperial/PiratesNewHorizon/book-piratecode.ftl鎰        7. Pirate is forbidden to kill the innocents from the space ship.
+/Locale/en-US/Imperial/PiratesNewHorizon/book-piratecode.ftl鎰        8. Pirate is permitted to make a hole in the heads of his true enemies: the heads of the enemy ship, and their guards.
+/Locale/en-US/Imperial/PiratesNewHorizon/book-piratecode.ftl鎰        9. Pirate is forbidden to leave his teammate in trouble
+/Locale/en-US/Imperial/PiratesNewHorizon/book-piratecode.ftl鎰        10. Pirate must server his captain.
+/Locale/en-US/Imperial/PiratesNewHorizon/book-piratecode.ftl鎰
 /Locale/en-US/borg/borg.ftl鎰borg-player-not-allowed = The brain doesn't fit!
 /Locale/en-US/borg/borg.ftl鎰borg-player-not-allowed-eject = The brain was expelled from the chassis!
 /Locale/en-US/borg/borg.ftl鎰borg-panel-not-open = The cyborg's panel isn't open...
@@ -13585,7 +13585,7 @@
 /Locale/en-US/administration/commands/connection-commands.ftl鎰cmd-grant_connect_bypass-invalid-duration = Invalid duration '{$duration}'
 /Locale/en-US/administration/commands/connection-commands.ftl鎰cmd-grant_connect_bypass-success = Successfully added bypass for user '{$user}'
 /Locale/en-US/Imperial/PiratesNewHorizon/catalog.ftl鎰pirate-ammunition-cart-name = Bullet .45 magnum.
-/Locale/en-US/Imperial/PiratesNewHorizon/catalog.ftl鎰pirate-ammunition-cart-description = Th' best thing for a pirate, and a girlfren' fo ya flintlock. 
+/Locale/en-US/Imperial/PiratesNewHorizon/catalog.ftl鎰pirate-ammunition-cart-description = Th' best thing for a pirate, and a girlfren' fo ya flintlock.
 /Locale/en-US/Imperial/PiratesNewHorizon/catalog.ftl鎰pirate-ammunition-rev-ammo-name = Magazine box fo' ya revolvers
 /Locale/en-US/Imperial/PiratesNewHorizon/catalog.ftl鎰pirate-ammunition-rev-ammo-description = Pal, these are mo' than enough. Ya could fill up a total of 12 of them, mate.
 /Locale/en-US/Imperial/PiratesNewHorizon/catalog.ftl鎰pirate-ammunition-cannonball-name = A bowlin' ball
@@ -13797,7 +13797,7 @@
 /Locale/en-US/Imperial/PiratesNewHorizon/datasets.ftl鎰names-pirate-first-dataset-49 = Requiem
 /Locale/en-US/Imperial/PiratesNewHorizon/datasets.ftl鎰names-pirate-first-dataset-50 = Arcade
 /Locale/en-US/Imperial/PiratesNewHorizon/datasets.ftl鎰names-pirate-first-dataset-51 = Star
-/Locale/en-US/Imperial/PiratesNewHorizon/datasets.ftl鎰names-pirate-first-dataset-52 = Universal                  
+/Locale/en-US/Imperial/PiratesNewHorizon/datasets.ftl鎰names-pirate-first-dataset-52 = Universal
 /Locale/en-US/Imperial/PiratesNewHorizon/datasets.ftl鎰names-pirate-last-dataset-1 = Barbarian
 /Locale/en-US/Imperial/PiratesNewHorizon/datasets.ftl鎰names-pirate-last-dataset-2 = Tooth
 /Locale/en-US/Imperial/PiratesNewHorizon/datasets.ftl鎰names-pirate-last-dataset-3 = Beard
@@ -13915,7 +13915,7 @@
 /Locale/en-US/Imperial/PiratesNewHorizon/gpstrackerremover.ftl鎰gps-missing-result = There seems to be no GPS tracker inside.
 /Locale/en-US/Imperial/PiratesNewHorizon/gpstrackerremover.ftl鎰gps-found-result = You start removing GPS tracker.
 /Locale/en-US/Imperial/PiratesNewHorizon/gpstrackerremover.ftl鎰gpstracker-examine-missing = Something small seems to be ripped out of here...
-/Locale/en-US/Imperial/PiratesNewHorizon/gpstrackerremover.ftl鎰gpstracker-examine-installed = A GPS tracker seems to be installed here... 
+/Locale/en-US/Imperial/PiratesNewHorizon/gpstrackerremover.ftl鎰gpstracker-examine-installed = A GPS tracker seems to be installed here...
 /Locale/en-US/Imperial/PiratesNewHorizon/gpstrackerremover.ftl鎰gps-system-verb-remove = Remove tracker
 /Locale/en-US/cable/cable-multitool-system.ftl鎰cable-multitool-system-internal-error-no-power-node = Your multitool reads, "INTERNAL ERROR: NOT A POWER CABLE".
 /Locale/en-US/cable/cable-multitool-system.ftl鎰cable-multitool-system-internal-error-missing-component = Your multitool reads, "INTERNAL ERROR: CABLE ABNORMAL".
@@ -14347,7 +14347,7 @@
 /Locale/en-US/markings/moth.ftl鎰marking-MothRArmFirewatch = Moth Right Arm (Firewatch)
 /Locale/en-US/markings/moth.ftl鎰marking-MothChestGothic-gothic_chest = Chest
 /Locale/en-US/markings/moth.ftl鎰marking-MothChestGothic = Moth Chest (Gothic)
-/Locale/en-US/markings/moth.ftl鎰marking-MothHeadGothic-gothic_head = Head 
+/Locale/en-US/markings/moth.ftl鎰marking-MothHeadGothic-gothic_head = Head
 /Locale/en-US/markings/moth.ftl鎰marking-MothHeadGothic = Moth Head (Gothic)
 /Locale/en-US/markings/moth.ftl鎰marking-MothLLegGothic-gothic_l_leg = Left Leg
 /Locale/en-US/markings/moth.ftl鎰marking-MothLLegGothic = Moth Left Leg (Gothic)
@@ -14878,7 +14878,7 @@
 /Locale/en-US/administration/commands/set-outfit-command.ftl鎰cmd-setoutfit-help = Usage: setoutfit <entityUid> | setoutfit <entityUid> <outfitId>
 /Locale/en-US/administration/commands/set-outfit-command.ftl鎰cmd-setoutfit-is-not-player-error = This command requires both arguments to work from the server console.
 /Locale/en-US/administration/commands/set-outfit-command.ftl鎰cmd-setoutfit-invalid-outfit-id-error = Invalid outfit id.
-/Locale/en-US/items/components/multi-handed-item-component.ftl鎰multi-handed-item-pick-up-fail = {$number -> 
+/Locale/en-US/items/components/multi-handed-item-component.ftl鎰multi-handed-item-pick-up-fail = {$number ->
 /Locale/en-US/items/components/multi-handed-item-component.ftl鎰    [one] You need one more free hand to pick up { THE($item) }.
 /Locale/en-US/items/components/multi-handed-item-component.ftl鎰    *[other] You need { $number } more free hands to pick up { THE($item) }.
 /Locale/en-US/items/components/multi-handed-item-component.ftl鎰}
@@ -15189,6 +15189,7 @@
 /Locale/en-US/cartridge-loader/cartridges.ftl鎰log-probe-printout-entry = #{$number} / {$time} / {$accessor}
 /Locale/en-US/cartridge-loader/cartridges.ftl鎰astro-nav-program-name = AstroNav
 /Locale/en-US/cartridge-loader/cartridges.ftl鎰med-tek-program-name = MedTek
+/Locale/en-US/cartridge-loader/cartridges.ftl鎰communication-program-name = Alert
 /Locale/en-US/cartridge-loader/cartridges.ftl鎰# NanoTask cartridge
 /Locale/en-US/cartridge-loader/cartridges.ftl鎰nano-task-ui-heading-high-priority-tasks =
 /Locale/en-US/cartridge-loader/cartridges.ftl鎰    { $amount ->
@@ -15614,7 +15615,7 @@
 /Locale/en-US/light/components/light-replacer-component.ftl鎰comp-light-replacer-insert-broken-light = You can't insert broken lights!
 /Locale/en-US/light/components/light-replacer-component.ftl鎰# Shown when player refill light from light box
 /Locale/en-US/light/components/light-replacer-component.ftl鎰comp-light-replacer-refill-from-storage = You refill {THE($light-replacer)}.
-/Locale/en-US/light/components/light-replacer-component.ftl鎰### Examine 
+/Locale/en-US/light/components/light-replacer-component.ftl鎰### Examine
 /Locale/en-US/light/components/light-replacer-component.ftl鎰comp-light-replacer-no-lights = It's empty.
 /Locale/en-US/light/components/light-replacer-component.ftl鎰comp-light-replacer-has-lights = It contains the following:
 /Locale/en-US/light/components/light-replacer-component.ftl鎰comp-light-replacer-light-listing = {$amount ->
@@ -16067,8 +16068,8 @@
 /Locale/en-US/administration/ui/player-panel.ftl鎰player-panel-follow = Follow
 /Locale/en-US/administration/ui/player-panel.ftl鎰player-panel-camera = Camera
 /Locale/en-US/machine-linking/components/signal-timer-component.ftl鎰signal-timer-menu-title = Timer
-/Locale/en-US/machine-linking/components/signal-timer-component.ftl鎰signal-timer-menu-label = Label: 
-/Locale/en-US/machine-linking/components/signal-timer-component.ftl鎰signal-timer-menu-delay = Delay: 
+/Locale/en-US/machine-linking/components/signal-timer-component.ftl鎰signal-timer-menu-label = Label:
+/Locale/en-US/machine-linking/components/signal-timer-component.ftl鎰signal-timer-menu-delay = Delay:
 /Locale/en-US/machine-linking/components/signal-timer-component.ftl鎰signal-timer-menu-start = Start
 /Locale/en-US/cloning/accept-cloning-window.ftl鎰accept-cloning-window-title = Cloning Machine
 /Locale/en-US/cloning/accept-cloning-window.ftl鎰accept-cloning-window-prompt-text-part = You are being cloned!
@@ -17384,9 +17385,9 @@
 /Locale/en-US/paper/envelope.ftl鎰envelope-letter-slot = Letter
 /Locale/en-US/paper/envelope.ftl鎰envelope-sealed-examine = [color=gray]{CAPITALIZE(THE($envelope))} is sealed.[/color]
 /Locale/en-US/paper/envelope.ftl鎰envelope-torn-examine = [color=yellow]{CAPITALIZE(THE($envelope))} is torn and unusable![/color]
-/Locale/en-US/paper/envelope.ftl鎰envelope-default-message = TO: 
-/Locale/en-US/paper/envelope.ftl鎰  
-/Locale/en-US/paper/envelope.ftl鎰  FROM: 
+/Locale/en-US/paper/envelope.ftl鎰envelope-default-message = TO:
+/Locale/en-US/paper/envelope.ftl鎰
+/Locale/en-US/paper/envelope.ftl鎰  FROM:
 /Locale/en-US/advertisements/vending/gibb.ftl鎰advertisement-gibb-1 = Delicious!
 /Locale/en-US/advertisements/vending/gibb.ftl鎰advertisement-gibb-2 = Recommended by at least one doctor!
 /Locale/en-US/advertisements/vending/gibb.ftl鎰advertisement-gibb-3 = Over 1 million drinks sold!
@@ -17471,15 +17472,15 @@
 /Locale/en-US/paper/paper-misc.ftl鎰      To create EZ Nutrient, a fertilizer densely packed with nutrients required for healthy plants, mix equal parts nitrogen, phosphorus, and potassium. To make a full bottle, thats 10u of each.
 /Locale/en-US/paper/paper-misc.ftl鎰      A little bottle of EZ Nutrient replaces a big stack of produce you'd otherwise compost to keep your plants growing strong. And crops you compost are crops you didn't make a profit on, so keep that EZ Nutrient flowing.
 /Locale/en-US/paper/paper-misc.ftl鎰      Second Experiment: Ammonia and Diethylamine
-/Locale/en-US/paper/paper-misc.ftl鎰      Mix 3 parts hydrogen to 1 part nitrogen to make ammonia. It's a healthy, nutritious treat for your crops that aren't at their best. 
+/Locale/en-US/paper/paper-misc.ftl鎰      Mix 3 parts hydrogen to 1 part nitrogen to make ammonia. It's a healthy, nutritious treat for your crops that aren't at their best.
 /Locale/en-US/paper/paper-misc.ftl鎰      But if you want to impress the judges at your local NanoTrasen-sponsored County Fair, you'll need to add an equal amount of ethanol to your ammonia.
 /Locale/en-US/paper/paper-misc.ftl鎰      This will mix into Diethylamine, a miracle fertilizer that can make plants grow faster AND live longer! Keep the crops you love with you longer thanks to Diethylamine.
 /Locale/en-US/paper/paper-misc.ftl鎰      Third Experiment: Unstable Mutagen
 /Locale/en-US/paper/paper-misc.ftl鎰      When you're ready to show everyone you're the greatest botanist on the station, you'll need to mix up some unstable mutagen and hope for the best. Despite the scary name, unstable mutagen is entirely safe when applied to plants, but do not drink the appealingly green chemical yourself.
-/Locale/en-US/paper/paper-misc.ftl鎰      
+/Locale/en-US/paper/paper-misc.ftl鎰
 /Locale/en-US/paper/paper-misc.ftl鎰      Mix equal parts radium, phosphorus, and chlorine together to get a bright green batch of unstable mutagen, the safe and fun way to get the most of your farm. The 15u this kit lets you make could be your introduction to agrichemical stardom!
 /Locale/en-US/paper/paper-misc.ftl鎰      Unstable mutagen can have a wide variety of effects on plant life, including drastic changes to all sorts of growth parameters, produce full of helpful pharmaceuticals, plants that glow in the dark, or creating entirely new species.
-/Locale/en-US/paper/paper-misc.ftl鎰      
+/Locale/en-US/paper/paper-misc.ftl鎰
 /Locale/en-US/paper/paper-misc.ftl鎰      Each individual plant responds to unstable mutagen differently, so you may want to use small doses on multiple crops and try to crossbreed the best traits from each of those. Applying multiple doses to one plant can stack multiple changes and make it harder to single out desirable traits.
 /Locale/en-US/paper/paper-misc.ftl鎰      Unstable mutagen is entirely safe when used as a fertilizer, and NanoTrasen takes no responsibility for dead crops, excessive water bills, newly sentient plants asking existential questions, or flora-strangled farmhands that may coincidentally occur while using it.
 /Locale/en-US/paper/paper-misc.ftl鎰      Do not drink unstable mutagen. Wash your hands thoroughly after handling. Wash your eyes if you have looked at unstable mutagen for over 30 minutes in a 24 hour period. Store in a dark room between 293–295K. Do not use on corporate holidays. If you begin hearing voices telling you to drink unstable mutagen, please contact your doctor, head of personnel, or exorcist.
@@ -18183,7 +18184,7 @@
 /Locale/en-US/commands/readyall-command.ftl鎰cmd-readyall-help = Usage: readyall [bool]
 /Locale/en-US/preferences/humanoid-character-profile.ftl鎰### UI
 /Locale/en-US/preferences/humanoid-character-profile.ftl鎰# Displayed in the Character prefs window
-/Locale/en-US/preferences/humanoid-character-profile.ftl鎰humanoid-character-profile-summary = 
+/Locale/en-US/preferences/humanoid-character-profile.ftl鎰humanoid-character-profile-summary =
 /Locale/en-US/preferences/humanoid-character-profile.ftl鎰    This is {$name}. {$gender ->
 /Locale/en-US/preferences/humanoid-character-profile.ftl鎰    [male] He is
 /Locale/en-US/preferences/humanoid-character-profile.ftl鎰    [female] She is
@@ -19287,7 +19288,7 @@
 /Locale/en-US/components/atmos-monitoring-component.ftl鎰atmos-monitoring-window-title = Atmospheric Network Monitor
 /Locale/en-US/components/atmos-monitoring-component.ftl鎰atmos-monitoring-window-station-name = [color=white][font size=14]{$stationName}[/font][/color]
 /Locale/en-US/components/atmos-monitoring-component.ftl鎰atmos-monitoring-window-unknown-location = Unknown location
-/Locale/en-US/components/atmos-monitoring-component.ftl鎰atmos-monitoring-window-label-gas-opening = Network opening 
+/Locale/en-US/components/atmos-monitoring-component.ftl鎰atmos-monitoring-window-label-gas-opening = Network opening
 /Locale/en-US/components/atmos-monitoring-component.ftl鎰atmos-monitoring-window-label-gas-scrubber = Air scrubber
 /Locale/en-US/components/atmos-monitoring-component.ftl鎰atmos-monitoring-window-label-gas-flow-regulator = Flow regulator
 /Locale/en-US/components/atmos-monitoring-component.ftl鎰atmos-monitoring-window-label-thermoregulator = Thermoregulator
@@ -19796,7 +19797,7 @@
 /Locale/en-US/round-end/round-end-summary-window.ftl鎰round-end-summary-window-duration-label = It lasted for [color=yellow]{$hours} hours, {$minutes} minutes, and {$seconds} seconds.
 /Locale/en-US/round-end/round-end-summary-window.ftl鎰round-end-summary-window-player-info-if-observer-text = [color=gray]{$playerOOCName}[/color] was [color=lightblue]{$playerICName}[/color], an observer.
 /Locale/en-US/round-end/round-end-summary-window.ftl鎰round-end-summary-window-player-info-if-not-observer-text = [color=gray]{$playerOOCName}[/color] was [color={$icNameColor}]{$playerICName}[/color] playing role of [color=orange]{$playerRole}[/color].
-/Locale/en-US/construction/components/construction-component-verbs.ftl鎰deconstructible-verb-begin-deconstruct = Begin deconstructing 
+/Locale/en-US/construction/components/construction-component-verbs.ftl鎰deconstructible-verb-begin-deconstruct = Begin deconstructing
 /Locale/en-US/construction/components/construction-component-verbs.ftl鎰deconstructible-verb-activate-no-target-text = There is no way to deconstruct this.
 /Locale/en-US/construction/components/construction-component-verbs.ftl鎰deconstructible-verb-activate-text = Examine to see instructions.
 /Locale/en-US/components/station-anchor-component.ftl鎰station-anchor-unanchoring-failed = Can't unanchor an active station anchor
@@ -20420,7 +20421,7 @@
 /Locale/en-US/construction/conditions/no-unstackable-in-tile.ftl鎰construction-step-condition-no-unstackable-in-tile = You cannot make a stack of similar devices.
 /Locale/en-US/construction/conditions/no-unstackable-in-tile.ftl鎰pipe-restrict-overlap-popup-blocked = { CAPITALIZE(THE($pipe))} doesn't fit over the other pipes!
 /Locale/en-US/damage/damage-command.ftl鎰## Damage command loc.
-/Locale/en-US/damage/damage-command.ftl鎰damage-command-description = Add or remove damage to an entity. 
+/Locale/en-US/damage/damage-command.ftl鎰damage-command-description = Add or remove damage to an entity.
 /Locale/en-US/damage/damage-command.ftl鎰damage-command-help = Usage: {$command} <type/group> <amount> [ignoreResistances] [uid]
 /Locale/en-US/damage/damage-command.ftl鎰damage-command-arg-type = <damage type or group>
 /Locale/en-US/damage/damage-command.ftl鎰damage-command-arg-quantity = [quantity]
@@ -20430,7 +20431,7 @@
 /Locale/en-US/damage/damage-command.ftl鎰damage-command-error-quantity = {$arg} is not a valid quantity.
 /Locale/en-US/damage/damage-command.ftl鎰damage-command-error-bool = {$arg} is not a valid bool.
 /Locale/en-US/damage/damage-command.ftl鎰damage-command-error-player = No entity attached to session. You must specify a target uid
-/Locale/en-US/damage/damage-command.ftl鎰damage-command-error-args = Invalid number of arguments 
+/Locale/en-US/damage/damage-command.ftl鎰damage-command-error-args = Invalid number of arguments
 /Locale/en-US/shuttles/emergency.ftl鎰# Commands
 /Locale/en-US/shuttles/emergency.ftl鎰## Delay shuttle round end
 /Locale/en-US/shuttles/emergency.ftl鎰cmd-delayroundend-desc = Stops the timer that ends the round when the emergency shuttle exits hyperspace.
@@ -20582,7 +20583,7 @@
 /Locale/en-US/silicons/station-ai-fixer-console.ftl鎰station-ai-fixer-console-window-continue-action = Continue
 /Locale/en-US/silicons/station-ai-fixer-console.ftl鎰station-ai-fixer-console-window-cancel-action = Cancel
 /Locale/en-US/silicons/station-ai-fixer-console.ftl鎰station-ai-fixer-console-window-purge-warning-title = Initiating AI purge
-/Locale/en-US/silicons/station-ai-fixer-console.ftl鎰station-ai-fixer-console-window-purge-warning-1 = You are about to permanently delete an artifical intelligence. 
+/Locale/en-US/silicons/station-ai-fixer-console.ftl鎰station-ai-fixer-console-window-purge-warning-1 = You are about to permanently delete an artifical intelligence.
 /Locale/en-US/silicons/station-ai-fixer-console.ftl鎰station-ai-fixer-console-window-purge-warning-2 = Once this operation is complete, the intelligence will be gone and cannot be revived.
 /Locale/en-US/silicons/station-ai-fixer-console.ftl鎰station-ai-fixer-console-window-purge-warning-3 = Do you wish to proceed?
 /Locale/en-US/construction/conditions/wire-panel.ftl鎰# WirePanel
@@ -22677,10 +22678,10 @@
 /Locale/en-US/delivery/delivery-spam.ftl鎰    .content =      To whom it may concern,
 /Locale/en-US/delivery/delivery-spam.ftl鎰                    The famous Adventures of Ian and Renault book series is one that is enjoyed by young children and at least one severely dyslexic lizard (don't worry, I got better). However, there was an error in the publication, as Ian and Renault would never make a mistake writing. It appears that in The Adventures of Ian and Renault: An Arctic Journey of Courage and Friendship, two lines from The Adventures of Ian and Renault: Exploring the City were used.
 /Locale/en-US/delivery/delivery-spam.ftl鎰                    This made no sense. How did Ian and Renault find a little kitten in the Arctic? What was the little kitten doing there? Why were Ian and Renault doing more than average today? And the worst offender is the second misplaced line, which is "As the day turned to night, they were exhausted abut happy from their adventure in the city" (Ian and Renault, 1). OH, SORRY!!! I'M NOT AWARE THAT THERE'S A CITY IN THE ARCTIC!!! THAT THEY JUST STOPPED AT. YOU KNOW. FOR A COFFEE. OH WAIT!! COFFEE KILLS DOGS AND FOXES!!!!!!!!! WHO WOULD PUBLISH THIS!!!!! YOU'VE JUST KILLED IAN AND RENAULT!!!!!!!!!!!!!!!!!!! HOW COULD YOU!!!!!!!!!!!!!!!!!!! YOU MONSTER!!!!!!!!!!!!!!!!!
-/Locale/en-US/delivery/delivery-spam.ftl鎰                    And what did you get for killing Ian and Renault. Hmm? A slightly longer book? You need that longer book, don't you? Longer books sell for more, do they? You wanted to make more money? 
-/Locale/en-US/delivery/delivery-spam.ftl鎰                    LOOK AT WHERE THAT GOT YOU. YOU'VE KILLED THE TWO. CONGRATS. 
-/Locale/en-US/delivery/delivery-spam.ftl鎰                    THERE WILL BE NO MORE SEQUELS NOW. 
-/Locale/en-US/delivery/delivery-spam.ftl鎰                    HOW'S THAT FOR MAKING MONEY???? IT SUCKS???? 
+/Locale/en-US/delivery/delivery-spam.ftl鎰                    And what did you get for killing Ian and Renault. Hmm? A slightly longer book? You need that longer book, don't you? Longer books sell for more, do they? You wanted to make more money?
+/Locale/en-US/delivery/delivery-spam.ftl鎰                    LOOK AT WHERE THAT GOT YOU. YOU'VE KILLED THE TWO. CONGRATS.
+/Locale/en-US/delivery/delivery-spam.ftl鎰                    THERE WILL BE NO MORE SEQUELS NOW.
+/Locale/en-US/delivery/delivery-spam.ftl鎰                    HOW'S THAT FOR MAKING MONEY???? IT SUCKS????
 /Locale/en-US/delivery/delivery-spam.ftl鎰                    {"["}bold]WELL YOU SHOULDN'T HAVE KILLED THEM!!!!!!!!!!!!!!![/bold]
 /Locale/en-US/spray-painter/spray-painter.ftl鎰# Components
 /Locale/en-US/spray-painter/spray-painter.ftl鎰spray-painter-ammo-on-examine = It holds {$charges} charges.
@@ -24700,7 +24701,7 @@
 /Locale/en-US/datasets/names/diona_last.ftl鎰names-diona-last-dataset-74 = Sleepiness
 /Locale/en-US/datasets/names/diona_last.ftl鎰names-diona-last-dataset-75 = Neutrality
 /Locale/en-US/datasets/names/diona_last.ftl鎰names-diona-last-dataset-76 = Fairness
-/Locale/en-US/datasets/names/diona_last.ftl鎰names-diona-last-dataset-77 = Silliness 
+/Locale/en-US/datasets/names/diona_last.ftl鎰names-diona-last-dataset-77 = Silliness
 /Locale/en-US/datasets/names/diona_last.ftl鎰names-diona-last-dataset-78 = Restraint
 /Locale/en-US/datasets/names/diona_last.ftl鎰names-diona-last-dataset-79 = Silence
 /Locale/en-US/datasets/names/diona_last.ftl鎰names-diona-last-dataset-80 = Bewilderment
@@ -29650,7 +29651,7 @@
 /Locale/en-US/reagents/meta/toxins.ftl鎰reagent-desc-lipolicide = A powerful toxin that will destroy fat cells, massively reducing body weight in a short time. Deadly to those without nutriment in their body.
 /Locale/en-US/reagents/meta/toxins.ftl鎰reagent-name-mechanotoxin = mechanotoxin
 /Locale/en-US/reagents/meta/toxins.ftl鎰reagent-desc-mechanotoxin = A neurotoxin used as venom by some species of spider. Degrades movement when built up.
-/Locale/en-US/reagents/meta/toxins.ftl鎰reagent-name-toxintrash = trash 
+/Locale/en-US/reagents/meta/toxins.ftl鎰reagent-name-toxintrash = trash
 /Locale/en-US/reagents/meta/toxins.ftl鎰reagent-desc-toxintrash = An awful-smelling fluid. Deadly to non-vox.
 /Locale/en-US/recycling/components/recycler-component.ftl鎰## RecyclerComponent
 /Locale/en-US/recycling/components/recycler-component.ftl鎰recycler-component-suicide-message-others = {$victim} tries to recycle {$victim}!
@@ -30150,7 +30151,7 @@
 /Locale/en-US/weapons/ranged/turrets.ftl鎰deployable-turret-component-access-denied = Access denied
 /Locale/en-US/weapons/ranged/turrets.ftl鎰deployable-turret-component-no-ammo = Weapon systems depleted
 /Locale/en-US/weapons/ranged/turrets.ftl鎰deployable-turret-component-is-broken = The turret is heavily damaged and must be repaired
-/Locale/en-US/weapons/ranged/turrets.ftl鎰deployable-turret-component-cannot-access-wires = You can't reach the maintenance panel while the turret is active 
+/Locale/en-US/weapons/ranged/turrets.ftl鎰deployable-turret-component-cannot-access-wires = You can't reach the maintenance panel while the turret is active
 /Locale/en-US/weapons/ranged/turrets.ftl鎰# Turret notification for station AI
 /Locale/en-US/weapons/ranged/turrets.ftl鎰station-ai-turret-component-name = {$name} ({$address})
 /Locale/en-US/weapons/ranged/turrets.ftl鎰station-ai-turret-component-is-attacking-warning = {CAPITALIZE($source)} has engaged a hostile target.
