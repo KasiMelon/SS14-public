@@ -8863,6 +8863,7 @@
 /Locale/ru-RU/cartridge-loader/cartridges.ftl鎰log-probe-printout-entry  = #{$number} / {$time} / {$accessor}
 /Locale/ru-RU/cartridge-loader/cartridges.ftl鎰astro-nav-program-name = АстроНав
 /Locale/ru-RU/cartridge-loader/cartridges.ftl鎰med-tek-program-name = МедТек
+/Locale/ru-RU/cartridge-loader/cartridges.ftl鎰communication-program-name = Оповещение
 /Locale/ru-RU/cartridge-loader/cartridges.ftl鎰# Картридж НаноЗадачи
 /Locale/ru-RU/cartridge-loader/cartridges.ftl鎰nano-task-ui-heading-high-priority-tasks =
 /Locale/ru-RU/cartridge-loader/cartridges.ftl鎰    { $amount ->
